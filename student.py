@@ -1,9 +1,6 @@
 import pymysql as p
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
-
-form_class = uic.loadUiType("login.ui")[0]
 
 import pymysql as p
 import sys
