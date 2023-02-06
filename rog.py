@@ -49,14 +49,6 @@ class log(QMainWindow,form_class):
 
 
 
-
-
-
-
-
-
-
-
     def join(self):
         self.conn = p.connect(host='localhost', port=3306, user='root', password='1234',
                               db='ssb', charset='utf8')
