@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
+    <width>729</width>
     <height>837</height>
    </rect>
   </property>
@@ -18,12 +18,12 @@
     <rect>
      <x>10</x>
      <y>20</y>
-     <width>561</width>
+     <width>701</width>
      <height>791</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label">
@@ -117,8 +117,8 @@
     <widget class="QPushButton" name="join_btn">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>530</y>
+       <x>420</x>
+       <y>640</y>
        <width>121</width>
        <height>61</height>
       </rect>
@@ -163,12 +163,38 @@
       <string>GO 로그인</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>540</y>
+       <width>64</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>구분</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="div_join">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>530</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>&quot;학생&quot;,&quot;선생님&quot; 입력하세요</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_3">
     <widget class="QLabel" name="name_label">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>490</x>
        <y>10</y>
        <width>141</width>
        <height>41</height>
@@ -178,10 +204,10 @@
       <string>OOO님 반갑습니다</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="logout_btn">
      <property name="geometry">
       <rect>
-       <x>580</x>
+       <x>610</x>
        <y>10</y>
        <width>75</width>
        <height>31</height>
@@ -191,7 +217,7 @@
       <string>로그아웃</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="qna_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -204,7 +230,7 @@
       <string>Q/A</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="study_btn">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -217,7 +243,7 @@
       <string>학습하기</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="chat_btn">
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -230,10 +256,10 @@
       <string>상담하기</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="mypage_btn">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>390</x>
        <y>10</y>
        <width>81</width>
        <height>31</height>
@@ -248,7 +274,7 @@
       <rect>
        <x>30</x>
        <y>190</y>
-       <width>621</width>
+       <width>641</width>
        <height>571</height>
       </rect>
      </property>
@@ -326,6 +352,29 @@
        </property>
        <property name="text">
         <string>선생님과 상담하기</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>430</y>
+         <width>481</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>514</x>
+         <y>430</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>전송</string>
        </property>
       </widget>
      </widget>
@@ -431,6 +480,9 @@
        <width>181</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="login_action">
