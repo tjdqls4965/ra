@@ -2,6 +2,7 @@ import pymysql as p
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+import pymysql
 
 form_class = uic.loadUiType("login.ui")[0]
 class log(QMainWindow,form_class):
@@ -22,18 +23,18 @@ class log(QMainWindow,form_class):
     def join_stack(self):
         self.stackedWidget.setCurrentIndex(0)
 
+    def open_db(self):
+        self.conn = p.connect(host='10.10.21.125', port=3306, user='root', password='1234', db='ap', charset='utf8')
+        self.c = self.conn.cursor()
+
     def login(self):
         print("2222")
-        self.conn = p.connect(host='localhost', port=3306, user='root', password='1234',
-                              db='ssb', charset='utf8')
-        self.cursor = self.conn.cursor()
-        self.cursor.execute('SELECT ID,비밀번호 FROM student')
-        self.id_data=self.cursor.fetchall()
-        # self.cursor.execute('SELECT 비밀번호 FROM student')
-        # self.ps_data=self.cursor.fetchall()
-        # print(self.id_data)
+        self.open_db()
+        self.c.execute('SELECT ID,비밀번호 FROM student')
+        self.id_data = self.c.fetchall()
+        self.c.close()
+
         self.login_id=self.id_2.text()
-        # print(self.login_id)
         self.login_ps=self.ps_2.text()
 
         for i in self.id_data:
@@ -42,11 +43,11 @@ class log(QMainWindow,form_class):
                 return self.login_id
 
     def join(self):
-        self.conn = p.connect(host='localhost', port=3306, user='root', password='1234',
-                              db='ssb', charset='utf8')
-        self.cursor = self.conn.cursor()
-        self.cursor.execute('SELECT * FROM student')
-        self.b = self.cursor.fetchall()
+        self.open_db()
+        self.c.execute('SELECT * FROM student')
+        self.b = self.c.fetchall()
+        self.c.close()
+
         self.id=self.id_join.text()
         self.ps=self.ps_join.text()
         self.ps_look=self.ps_look.text()
@@ -70,15 +71,12 @@ class log(QMainWindow,form_class):
                     QMessageBox.warning(self, '비밀번호 오류', '오류 비밀번호')
                 else:
                     QMessageBox.information(self, '회원가입 완료', '맞음 비밀번호')
-                    self.cursor.execute("set SQL_SAFE_UPDATES = 0")
-                    self.cursor.execute(f'update student set ID="{self.id}",비밀번호="{self.ps}" WHERE 이름="{self.name}"')
+                    self.c.execute("set SQL_SAFE_UPDATES = 0")
+                    self.c.execute(f'update student set ID="{self.id}",비밀번호="{self.ps}" WHERE 이름="{self.name}"')
                     #
                     # self.cursor.execute("set SQL_SAFE_UPDATES = 1")
                     self.conn.commit()
                     self.conn.close()
-
-
-
 
 
         else:
@@ -87,18 +85,8 @@ class log(QMainWindow,form_class):
 
 
 
-
-
-
 if __name__ == "__main__" :
-    #QApplication : 프로그램을 실행시켜주는 클래스
     app = QApplication(sys.argv)
-
-    #WindowClass의 인스턴스 생성
     myWindow = log()
-
-    #프로그램 화면을 보여주는 코드
     myWindow.show()
-
-    #프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()
