@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1105</width>
-    <height>835</height>
+    <width>598</width>
+    <height>837</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,23 +16,23 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>30</y>
-     <width>1031</width>
-     <height>781</height>
+     <x>10</x>
+     <y>20</y>
+     <width>561</width>
+     <height>791</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>303</x>
-       <y>40</y>
-       <width>491</width>
-       <height>91</height>
+       <x>160</x>
+       <y>50</y>
+       <width>371</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -42,7 +42,7 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>140</x>
        <y>210</y>
        <width>64</width>
        <height>15</height>
@@ -55,35 +55,35 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>140</x>
        <y>300</y>
        <width>64</width>
        <height>15</height>
       </rect>
      </property>
      <property name="text">
-      <string>PS</string>
+      <string>PW</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>140</x>
        <y>380</y>
        <width>64</width>
        <height>15</height>
       </rect>
      </property>
      <property name="text">
-      <string>PS look</string>
+      <string>PW look</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="id_join">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>310</x>
        <y>200</y>
-       <width>391</width>
+       <width>201</width>
        <height>41</height>
       </rect>
      </property>
@@ -91,30 +91,36 @@
     <widget class="QLineEdit" name="ps_join">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>310</x>
        <y>290</y>
-       <width>391</width>
+       <width>201</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
      </property>
     </widget>
     <widget class="QLineEdit" name="ps_look">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>310</x>
        <y>370</y>
-       <width>391</width>
+       <width>201</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="join_btn">
      <property name="geometry">
       <rect>
-       <x>740</x>
-       <y>510</y>
-       <width>151</width>
-       <height>81</height>
+       <x>380</x>
+       <y>530</y>
+       <width>121</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="text">
@@ -124,7 +130,7 @@
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>140</x>
        <y>460</y>
        <width>64</width>
        <height>15</height>
@@ -137,9 +143,9 @@
     <widget class="QLineEdit" name="name_join">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>310</x>
        <y>450</y>
-       <width>391</width>
+       <width>201</width>
        <height>41</height>
       </rect>
      </property>
@@ -147,8 +153,8 @@
     <widget class="QPushButton" name="move_login">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>30</y>
+       <x>10</x>
+       <y>10</y>
        <width>93</width>
        <height>51</height>
       </rect>
@@ -158,12 +164,221 @@
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QLabel" name="name_label">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>10</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OOO님 반갑습니다</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>10</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>로그아웃</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>75</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Q/A</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>100</y>
+       <width>75</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>학습하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>100</y>
+       <width>75</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>상담하기</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>마이페이지</string>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>621</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="page_4">
+      <widget class="QListWidget" name="listWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>581</width>
+         <height>281</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>400</y>
+         <width>481</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="qna_send">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>400</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>전송</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>무엇이든 물어보세요</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5"/>
+     <widget class="QWidget" name="page_6">
+      <widget class="QListWidget" name="listWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>581</width>
+         <height>321</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>선생님과 상담하기</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_7">
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>191</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>나의 학습진도</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>나의 포인트</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_8"/>
    <widget class="QWidget" name="page_2">
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>80</y>
+       <x>330</x>
+       <y>370</y>
        <width>64</width>
        <height>15</height>
       </rect>
@@ -175,8 +390,8 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>220</y>
+       <x>190</x>
+       <y>430</y>
        <width>64</width>
        <height>15</height>
       </rect>
@@ -188,21 +403,21 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>310</y>
+       <x>190</x>
+       <y>510</y>
        <width>64</width>
        <height>15</height>
       </rect>
      </property>
      <property name="text">
-      <string>PS</string>
+      <string>PW</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="id_2">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>220</y>
+       <x>290</x>
+       <y>430</y>
        <width>181</width>
        <height>31</height>
       </rect>
@@ -211,8 +426,8 @@
     <widget class="QLineEdit" name="ps_2">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>300</y>
+       <x>290</x>
+       <y>510</y>
        <width>181</width>
        <height>31</height>
       </rect>
@@ -221,8 +436,8 @@
     <widget class="QPushButton" name="login_action">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>410</y>
+       <x>220</x>
+       <y>610</y>
        <width>121</width>
        <height>51</height>
       </rect>
@@ -234,27 +449,14 @@
     <widget class="QPushButton" name="join_page">
      <property name="geometry">
       <rect>
-       <x>760</x>
-       <y>410</y>
+       <x>360</x>
+       <y>610</y>
        <width>121</width>
        <height>51</height>
       </rect>
      </property>
      <property name="text">
       <string>회원가입</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="main_btn">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>40</y>
-       <width>121</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>메인으로</string>
      </property>
     </widget>
    </widget>

@@ -8,23 +8,19 @@ class log(QMainWindow,form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.stackedWidget.setCurrentIndex(0)
-        self.setWindowTitle('로그인하기')
+        self.stackedWidget.setCurrentIndex(3)
+        self.setWindowTitle('박보영과 함께하는 곤충농장')
         self.join_btn.clicked.connect(self.join)
         self.move_login.clicked.connect(self.login_stack)
         self.join_page.clicked.connect(self.join_stack)
         self.login_action.clicked.connect(self.login)
-        self.main_btn.clicked.connect(self.go_main)
         self.member = False
         # DB 연결
 
     def login_stack(self):
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(3)
     def join_stack(self):
         self.stackedWidget.setCurrentIndex(0)
-    def go_main(self):
-        self.parent().setCurrentIndex(0)
-
 
     def login(self):
         print("2222")
@@ -40,14 +36,10 @@ class log(QMainWindow,form_class):
         # print(self.login_id)
         self.login_ps=self.ps_2.text()
 
-
-
         for i in self.id_data:
             if self.login_id == i[0] and self.login_ps == i[1]:
 
                 return self.login_id
-
-
 
     def join(self):
         self.conn = p.connect(host='localhost', port=3306, user='root', password='1234',
@@ -65,7 +57,6 @@ class log(QMainWindow,form_class):
         for i in range(0,len(self.b)):
             self.id_list.append(self.b[i][1])
         print(self.id_list)
-
 
         if self.id != '' and self.ps != '' and self.ps_look != '' and self.name != '':
             QMessageBox.information(self, '요건충족', 'dsadsa')
